@@ -1,3 +1,3 @@
 import ErrorPage from "./ErrorPage";
-
-export { ErrorPage };
+import MainPage from "./MainPage";
+export { ErrorPage, MainPage };
