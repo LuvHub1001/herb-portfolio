@@ -5,7 +5,7 @@ function withCommonLayout(Component) {
     return (
       <div>
         <Header />
-        <div style={{ height: "calc(100vh - 250px)" }}>
+        <div style={{ height: "calc(100vh - 100px)" }}>
           <Component />
         </div>
       </div>
