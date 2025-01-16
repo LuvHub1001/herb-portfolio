@@ -1,9 +1,11 @@
+import { AboutMeItem } from "../";
 import styled from "styled-components";
 
 function AboutMe() {
   return (
     <AboutMeWrapper>
       <h1>ABOUT ME</h1>
+      <AboutMeItem />
     </AboutMeWrapper>
   );
 }
@@ -11,7 +13,9 @@ function AboutMe() {
 export default AboutMe;
 
 const AboutMeWrapper = styled.div`
-  display: flex;
-  margin-top: 50px;
-  justify-content: center;
+  margin-top: 40px;
+  width: 100%;
+  display: inline-block;
+  min-height: 500px;
+  text-align: center;
 `;
