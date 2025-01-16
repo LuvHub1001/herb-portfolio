@@ -1,4 +1,4 @@
-import { Header, Footer } from "../components/";
+import { Header } from "../components/";
 
 function withCommonLayout(Component) {
   const WrappedComponent = () => {
@@ -8,7 +8,6 @@ function withCommonLayout(Component) {
         <div style={{ height: "calc(100vh - 250px)" }}>
           <Component />
         </div>
-        <Footer />
       </div>
     );
   };
