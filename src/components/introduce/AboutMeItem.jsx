@@ -1,12 +1,9 @@
 import styled from "styled-components";
 
-function AboutMeItem() {
+function AboutMeItem({ items }) {
   return (
-    <ItemWrapper>
-      <div>가</div>
-      <div>나</div>
-      <div>다</div>
-      <div>라</div>
+    <ItemWrapper className="item-wrapper">
+      <div className="item-box">{items.title}</div>
     </ItemWrapper>
   );
 }
@@ -15,5 +12,17 @@ export default AboutMeItem;
 
 const ItemWrapper = styled.div`
   display: flex;
-  flex-direction: column;
+  height: 100px;
+  justify-content: center;
+  align-items: center;
+
+  .item-box {
+    display: flex;
+    width: 40%;
+    height: 70px;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid red;
+    border-radius: 8px;
+  }
 `;

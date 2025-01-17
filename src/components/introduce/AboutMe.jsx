@@ -1,11 +1,18 @@
-import { AboutMeItem } from "../";
+import { AboutMeItem, RenderComponent } from "../";
+import { introduce_data } from "../../lib/introduce";
 import styled from "styled-components";
 
 function AboutMe() {
   return (
     <AboutMeWrapper>
       <h1>ABOUT ME</h1>
-      <AboutMeItem />
+      <RenderComponent
+        className="about-render"
+        items={introduce_data || []}
+        render={(item) => {
+          return <AboutMeItem items={item} />;
+        }}
+      />
     </AboutMeWrapper>
   );
 }
