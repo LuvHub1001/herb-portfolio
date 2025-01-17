@@ -18,11 +18,12 @@ const ItemWrapper = styled.div`
 
   .item-box {
     display: flex;
-    width: 40%;
+    width: 35%;
     height: 70px;
     justify-content: center;
     align-items: center;
-    border: 1px solid red;
+    background-color: white;
+    border: 1px solid gray;
     border-radius: 8px;
   }
 `;
