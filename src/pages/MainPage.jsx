@@ -1,10 +1,11 @@
-import { Welcome, AboutMe } from "../components";
+import { Welcome, AboutMe, Skill } from "../components";
 
 function MainPage() {
   return (
     <>
       <Welcome />
       <AboutMe />
+      <Skill />
     </>
   );
 }
