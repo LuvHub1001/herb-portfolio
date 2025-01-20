@@ -6,19 +6,32 @@ function ProjectItem({ items }) {
   return (
     <ItemWrapper className="item-wrapper">
       <div className="image-box">
-        <img src={items.project_img} alt={altText} />
+        <img src={items.img} alt={altText} />
       </div>
 
       <div className="description-box">
-        {items.project_rs.map((item, idx) => {
+        {[items].map((item) => {
           return (
-            <div key={idx} className="description">
-              <div>프로젝트명: {items.project_title}</div>
-              <div>프로젝트 목표: {items.project_goal}</div>
-              <div>참여 인원:{item.member}</div>
-              <div>사용 기술:{item.skill}</div>
-              <div>담당 업무:{item.task}</div>
-              <div>{item.effect}</div>
+            <div key={item.id} className="description">
+              <div>프로젝트명: {items.title}</div>
+              <div>프로젝트 기간: {items.during}</div>
+              <div>참여 인원: {item.member}</div>
+              <div>사용 기술: {item.projectSkill}</div>
+              <div>설명: {item.description}</div>
+              <div>링크: {item.link}</div>
+
+              <br />
+              <div>
+                {item.impact.map((item) => {
+                  return (
+                    <div key={item.id}>
+                      <div>[{item.impactTitle}]</div>
+                      <div>➡️ {item.impactContent}</div>
+                      <br />
+                    </div>
+                  );
+                })}
+              </div>
             </div>
           );
         })}
@@ -59,10 +72,11 @@ const ItemWrapper = styled.div`
     display: flex;
     font-size: 17px;
     padding-top: 30px;
+    padding-left: 15px;
     align-items: flex-start;
     text-align: left;
     width: 50%;
-    border: 1px solid blue;
+    border: 2px solid #efefef;
     border-radius: 8px;
   }
 `;
