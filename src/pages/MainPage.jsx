@@ -1,4 +1,4 @@
-import { Welcome, AboutMe, Skill, Project } from "../components";
+import { Welcome, AboutMe, Skill, Project, Career } from "../components";
 
 function MainPage() {
   return (
@@ -7,6 +7,7 @@ function MainPage() {
       <AboutMe />
       <Skill />
       <Project />
+      <Career />
     </>
   );
 }
