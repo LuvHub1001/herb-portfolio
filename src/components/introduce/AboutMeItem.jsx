@@ -1,13 +1,18 @@
 import { Box, Modal } from "@mui/material";
 import styled from "styled-components";
-import { useModal } from "../../hooks";
+import { useModal, useMedia } from "../../hooks";
 
 function AboutMeItem({ items }) {
   const { open, handleOpen, handleClose } = useModal();
+  const { isMobile } = useMedia();
 
   return (
     <ItemWrapper className="item-wrapper">
-      <div className="item-box" onClick={handleOpen}>
+      <div
+        className="item-box"
+        onClick={handleOpen}
+        style={{ width: isMobile ? "85%" : "35%" }}
+      >
         {items.title}
       </div>
       <Modal open={open} onClose={handleClose}>
@@ -34,13 +39,13 @@ export default AboutMeItem;
 
 const ItemWrapper = styled.div`
   display: flex;
+  width: auto;
   height: 100px;
   justify-content: center;
   align-items: center;
 
   .item-box {
     display: flex;
-    width: 35%;
     height: 70px;
     justify-content: center;
     align-items: center;

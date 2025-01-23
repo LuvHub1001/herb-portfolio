@@ -1,11 +1,17 @@
+import { useMedia } from "../../hooks";
 import styled from "styled-components";
 
 function Welcome() {
+  const { isMobile } = useMedia();
+
   return (
     <WelcomeWrapper>
-      <div className="temp">
-        <h1>DONGYEOP PORTFOLIO</h1>
-
+      <div>
+        {isMobile ? (
+          <h1 style={{ textAlign: "center" }}>DONGYEOP PORTFOLIO</h1>
+        ) : (
+          <h1>DONGYEOP PORTFOLIO</h1>
+        )}
         <div className="img-box">
           <img
             alt="이미지를 불러오지 못했습니다."

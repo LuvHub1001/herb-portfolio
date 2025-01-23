@@ -1,7 +1,31 @@
 import styled from "styled-components";
+import { useMedia, useMenu } from "../../hooks";
+import MenuIcon from "@mui/icons-material/Menu";
 
 function Header() {
-  return (
+  const { isMobile } = useMedia();
+  const { isClick, handleMenuClick } = useMenu();
+
+  return isMobile ? (
+    <>
+      <MobileNaviWrapper>
+        <div className="mobile-navi-box">
+          <div>DongYeop</div>
+          <MenuIcon fontSize="large" onClick={handleMenuClick} />
+        </div>
+      </MobileNaviWrapper>
+      {isClick ? (
+        <MobileMenuWrapper>
+          <div>About Me</div>
+          <div>Skill</div>
+          <div>Project</div>
+          <div>Career</div>
+        </MobileMenuWrapper>
+      ) : (
+        <></>
+      )}
+    </>
+  ) : (
     <HeaderWrapper>
       <div className="navi-box">
         <div>About Me</div>
@@ -28,5 +52,45 @@ const HeaderWrapper = styled.div`
     align-items: center;
     font-size: 25px;
     font-weight: bold;
+  }
+`;
+
+const MobileNaviWrapper = styled.div`
+  display: flex;
+  min-height: 60px;
+  width: 100%;
+  align-items: center;
+
+  .mobile-navi-box {
+    display: flex;
+    aling-items: center;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .mobile-navi-box > div {
+    display: flex;
+    color: grey;
+    letter-spacing: 5px;
+    align-items: center;
+  }
+`;
+
+const MobileMenuWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 60px;
+  border-top: 1px solid grey;
+  border-radius: 0 0 6px 6px;
+  background-color: white;
+  position: absolute;
+  overflow: hidden;
+
+  div {
+    padding: 10px;
+    text-align: center;
+    font-size: 18px;
+    cursor: pointer;
   }
 `;
