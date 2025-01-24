@@ -1,9 +1,69 @@
 import styled from "styled-components";
+import Slider from "react-slick";
+import { useMedia } from "../../hooks";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 function SkillItem() {
   const altText = "이미지를 불러오지 못했습니다.";
+  const { isMobile } = useMedia();
 
-  return (
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: true,
+  };
+
+  const skillItems = [
+    {
+      id: "front-item",
+      images: [
+        "/images/JS.png",
+        "/images/TS.svg",
+        "/images/React.png",
+        "/images/Jquery.png",
+      ],
+    },
+    {
+      id: "query-item",
+      images: [
+        "/images/mssql.jpg",
+        "/images/mysql.png",
+        "/images/oracle.png",
+        "/images/Nodejs.png",
+      ],
+    },
+    {
+      id: "tool-item",
+      images: [
+        "/images/styled-components.png",
+        "/images/mui.jpg",
+        "/images/git.png",
+        "/images/figma.avif",
+      ],
+    },
+  ];
+
+  return isMobile ? (
+    <MobileWrapper>
+      <Slider {...settings}>
+        {skillItems.map((skill) => (
+          <div key={skill.id} className="mobile-skill-item">
+            <div className="mobile-skill-img-group">
+              {skill.images.map((src, idx) => (
+                <div key={idx} className="mobile-skill-img-box">
+                  <img alt={altText} src={src} />
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
+      </Slider>
+    </MobileWrapper>
+  ) : (
     <ItemWrapper className="item-wrapper">
       <div className="skill-item front-item">
         <div className="skill-img-box">
@@ -69,5 +129,40 @@ const ItemWrapper = styled.div`
   & img {
     width: 150px;
     height: 150px;
+  }
+`;
+
+const MobileWrapper = styled.div`
+  margin: 20px auto;
+  width: 90%;
+
+  .mobile-skill-item {
+    text-align: center;
+    padding: 10px;
+  }
+
+  .mobile-skill-img-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .mobile-skill-img-box {
+    margin: 10px;
+  }
+
+  & img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .slick-dots li button:before {
+    font-size: 10px; // 점 크기 조정
+    color: gray;
+  }
+
+  .slick-prev:before,
+  .slick-next:before {
+    color: black; // 화살표 색상
   }
 `;
