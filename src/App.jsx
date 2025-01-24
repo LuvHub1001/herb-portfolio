@@ -3,8 +3,6 @@ import { ErrorBoundary, Loading } from "./components";
 import PublicRouter from "./routes/PublicRouter";
 import "./App.css";
 
-// Todo:: Modal, 반응형, Project데이터
-
 function App() {
   return (
     <ErrorBoundary>
