@@ -3,10 +3,12 @@ import CareerItem from "./CareerItem";
 
 function Career() {
   return (
-    <CareerWrapper>
-      <h1>Career</h1>
-      <CareerItem />
-    </CareerWrapper>
+    <section id="career">
+      <CareerWrapper>
+        <h1>Career</h1>
+        <CareerItem />
+      </CareerWrapper>
+    </section>
   );
 }
 

@@ -7,14 +7,16 @@ function Project() {
   const { isMobile } = useMedia();
 
   return (
-    <ProjectWrapper>
-      <h1>zxcvqw</h1>
-      <RenderComponent
-        className="project-render"
-        items={isMobile ? [project_data[0]] : project_data}
-        render={(item) => <ProjectItem items={item} />}
-      />
-    </ProjectWrapper>
+    <section id="project">
+      <ProjectWrapper>
+        <h1>Project</h1>
+        <RenderComponent
+          className="project-render"
+          items={isMobile ? [project_data[0]] : project_data}
+          render={(item) => <ProjectItem items={item} />}
+        />
+      </ProjectWrapper>
+    </section>
   );
 }
 

@@ -3,10 +3,12 @@ import styled from "styled-components";
 
 function Skill() {
   return (
-    <SkillWrapper>
-      <h1>Skill</h1>
-      <SkillItem />
-    </SkillWrapper>
+    <section id="skill">
+      <SkillWrapper>
+        <h1>Skill</h1>
+        <SkillItem />
+      </SkillWrapper>
+    </section>
   );
 }
 

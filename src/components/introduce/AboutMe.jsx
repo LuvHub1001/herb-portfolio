@@ -4,16 +4,18 @@ import styled from "styled-components";
 
 function AboutMe() {
   return (
-    <AboutMeWrapper>
-      <h1>About Me</h1>
-      <RenderComponent
-        className="about-render"
-        items={introduce_data || []}
-        render={(item) => {
-          return <AboutMeItem items={item} />;
-        }}
-      />
-    </AboutMeWrapper>
+    <section id="about">
+      <AboutMeWrapper>
+        <h1>About Me</h1>
+        <RenderComponent
+          className="about-render"
+          items={introduce_data || []}
+          render={(item) => {
+            return <AboutMeItem items={item} />;
+          }}
+        />
+      </AboutMeWrapper>
+    </section>
   );
 }
 
