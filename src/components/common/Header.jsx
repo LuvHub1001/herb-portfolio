@@ -10,17 +10,17 @@ function Header() {
     <>
       <MobileNaviWrapper>
         <div className="mobile-navi-box">
-          <div>DongYeop</div>
+          <div>&nbsp;DongYeop</div>
           <MenuIcon fontSize="large" onClick={handleMenuClick} />
         </div>
       </MobileNaviWrapper>
       {isClick ? (
-        <MobileMenuWrapper>
+        <MobileNaviItemWrapper>
           <div>About Me</div>
           <div>Skill</div>
           <div>Project</div>
           <div>Career</div>
-        </MobileMenuWrapper>
+        </MobileNaviItemWrapper>
       ) : (
         <></>
       )}
@@ -58,12 +58,10 @@ const HeaderWrapper = styled.div`
 const MobileNaviWrapper = styled.div`
   display: flex;
   min-height: 60px;
-  width: 100%;
   align-items: center;
 
   .mobile-navi-box {
     display: flex;
-    aling-items: center;
     width: 100%;
     justify-content: space-between;
   }
@@ -76,11 +74,11 @@ const MobileNaviWrapper = styled.div`
   }
 `;
 
-const MobileMenuWrapper = styled.div`
+const MobileNaviItemWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  width: 100%;
   min-height: 60px;
+  width: 100%;
   border-top: 1px solid grey;
   border-radius: 0 0 6px 6px;
   background-color: white;
