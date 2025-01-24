@@ -1,8 +1,8 @@
 export const project_data = [
   {
-    id: 0,
+    id: "portfolio",
     title: "포트폴리오",
-    img: "/images/project1.png",
+    img: "/images/portfolio.png",
     during: "2025.01~",
     description: "포트폴리오를 React를 활용하여 제작하였습니다.",
     member: "개인프로젝트 / 프론트엔드(기여도 100%), UI 디자인(기여도 100%)",
@@ -28,7 +28,7 @@ export const project_data = [
   },
 
   {
-    id: 1,
+    id: "toy-js",
     title: "토이 바닐라 프로젝트 + 자료구조 구현",
     during: "2025.01 ~ ",
     description:
@@ -54,7 +54,7 @@ export const project_data = [
   },
 
   {
-    id: 2,
+    id: "address",
     title: "인사시스템 리뉴얼",
     during: "2023.01 ~ 2023.05",
     description: "사내 인사시스템을 리뉴얼하였습니다.",

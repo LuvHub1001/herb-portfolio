@@ -1,16 +1,18 @@
 import styled from "styled-components";
+import { useMedia } from "../../hooks";
 import { RenderComponent, ProjectItem } from "../";
 import { project_data } from "../../lib/project";
+
 function Project() {
+  const { isMobile } = useMedia();
+
   return (
     <ProjectWrapper>
-      <h1>PROJECT</h1>
+      <h1>zxcvqw</h1>
       <RenderComponent
         className="project-render"
-        items={project_data || []}
-        render={(item) => {
-          return <ProjectItem items={item} />;
-        }}
+        items={isMobile ? [project_data[0]] : project_data}
+        render={(item) => <ProjectItem items={item} />}
       />
     </ProjectWrapper>
   );
