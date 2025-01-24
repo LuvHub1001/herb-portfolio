@@ -16,19 +16,13 @@ function AboutMeItem({ items }) {
         {items.title}
       </div>
       <Modal open={open} onClose={handleClose}>
-        <Box sx={ModalStyle}>
-          {items.content.map((item, idx) => {
-            return (
-              <Box key={idx}>
-                <Box>
-                  <strong>{item.subtitle}</strong>
-                </Box>
-                <br />
-                <Box>{item.subcontent}</Box>
-                <br />
-              </Box>
-            );
-          })}
+        <Box sx={isMobile ? MobileModalStyle : ModalStyle}>
+          {items.content.map((item, idx) => (
+            <Box key={idx}>
+              <strong>{item.subtitle}</strong>
+              <p>{item.subcontent}</p>
+            </Box>
+          ))}
         </Box>
       </Modal>
     </ItemWrapper>
@@ -57,11 +51,25 @@ const ItemWrapper = styled.div`
 `;
 
 const ModalStyle = {
-  position: "absolute",
+  position: "fixed",
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
   width: 800,
+  maxWidth: "90%",
+  bgcolor: "background.paper",
+  border: "2px solid #000",
+  boxShadow: 24,
+  p: 4,
+};
+
+const MobileModalStyle = {
+  position: "fixed",
+  top: "50%",
+  left: "50%",
+  transform: "translate(-50%, -50%)",
+  width: "90%",
+  maxWidth: "380px",
   bgcolor: "background.paper",
   border: "2px solid #000",
   boxShadow: 24,
