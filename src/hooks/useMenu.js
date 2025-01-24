@@ -7,7 +7,14 @@ const useMenu = () => {
     setIsClick((prev) => !prev);
   };
 
-  return { isClick, handleMenuClick, setIsClick };
+  const handleScroll = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  return { isClick, handleMenuClick, setIsClick, handleScroll };
 };
 
 export default useMenu;
