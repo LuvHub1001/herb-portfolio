@@ -157,12 +157,12 @@ const MobileWrapper = styled.div`
   }
 
   .slick-dots li button:before {
-    font-size: 10px; // 점 크기 조정
+    font-size: 10px;
     color: gray;
   }
 
   .slick-prev:before,
   .slick-next:before {
-    color: black; // 화살표 색상
+    color: black;
   }
 `;
