@@ -5,28 +5,30 @@ function Welcome() {
   const { isMobile } = useMedia();
 
   return (
-    <WelcomeWrapper>
-      <div>
-        {isMobile ? (
-          <h1 style={{ textAlign: "center" }}>DONGYEOP PORTFOLIO</h1>
-        ) : (
-          <h1>DONGYEOP PORTFOLIO</h1>
-        )}
-        <div className="img-box">
-          <img
-            alt="이미지를 불러오지 못했습니다."
-            src="/images/아스날뉴진스.png"
-          />
-        </div>
-
-        <div className="ment-box">
-          <div>
-            안녕하세요 &nbsp;<strong>FE DEVELOPER</strong>&nbsp;이동엽입니다.
+    <section id="home">
+      <WelcomeWrapper>
+        <div>
+          {isMobile ? (
+            <h1 style={{ textAlign: "center" }}>DONGYEOP PORTFOLIO</h1>
+          ) : (
+            <h1>DONGYEOP PORTFOLIO</h1>
+          )}
+          <div className="img-box">
+            <img
+              alt="이미지를 불러오지 못했습니다."
+              src="/images/selfie2.jpg"
+            />
           </div>
-          <div>제 포트폴리오에 방문해주셔서 감사합니다.</div>
+
+          <div className="ment-box">
+            <div>
+              안녕하세요 &nbsp;<strong>FE DEVELOPER</strong>&nbsp;이동엽입니다.
+            </div>
+            <div>제 포트폴리오에 방문해주셔서 감사합니다.</div>
+          </div>
         </div>
-      </div>
-    </WelcomeWrapper>
+      </WelcomeWrapper>
+    </section>
   );
 }
 
