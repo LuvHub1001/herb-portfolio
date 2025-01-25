@@ -3,6 +3,7 @@ import ErrorBoundary from "./common/ErrorBoundary";
 import Header from "./common/Header";
 import Loading from "./common/Loading";
 import RenderComponent from "./common/RenderComponent";
+import ScrollButton from "./common/ScrollButton";
 
 // Introduce
 import Welcome from "./introduce/Welcome";
@@ -20,6 +21,7 @@ export {
   Header,
   Loading,
   RenderComponent,
+  ScrollButton,
   Welcome,
   AboutMe,
   AboutMeItem,
