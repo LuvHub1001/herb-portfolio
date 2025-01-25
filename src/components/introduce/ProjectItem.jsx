@@ -17,7 +17,7 @@ const sliderSettings = {
 const projectImages = [
   { id: "portfolio", images: ["/images/portfolio.png"] },
   { id: "toy-js", images: ["/images/Nodejs.png"] },
-  { id: "address", images: ["/images/figma.avif"] },
+  { id: "address", images: ["/images/address.png"] },
 ];
 
 const altText = "이미지를 불러오지 못했습니다.";
@@ -36,7 +36,12 @@ function ProjectItem({ items }) {
         <div>
           링크:{" "}
           {projectDetails.link ? (
-            <a href={projectDetails.link} target="_blank" rel="noreferrer">
+            <a
+              style={{ color: "inherit", textDecoration: "none" }}
+              href={projectDetails.link}
+              target="_blank"
+              rel="noreferrer"
+            >
               {projectDetails.link}
             </a>
           ) : (
@@ -112,7 +117,7 @@ const ItemWrapper = styled.div`
   }
 
   & img {
-    width: 600px;
+    width: 400px;
     height: 330px;
     border-radius: 8px;
   }
