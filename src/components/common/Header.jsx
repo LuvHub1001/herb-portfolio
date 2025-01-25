@@ -10,7 +10,7 @@ function Header() {
     <>
       <MobileNaviWrapper>
         <div className="mobile-navi-box">
-          <div>&nbsp;DongYeop</div>
+          <div onClick={() => handleScroll("home")}>&nbsp;DongYeop</div>
           <MenuIcon fontSize="large" onClick={handleMenuClick} />
         </div>
       </MobileNaviWrapper>
@@ -38,9 +38,12 @@ export default Header;
 
 const HeaderWrapper = styled.div`
   display: flex;
-  min-height: 100px;
+  min-height: 60px;
   background-color: white;
   color: black;
+  width: 100%;
+  position: fixed;
+  top: 0;
 
   .navi-box {
     display: flex;
@@ -50,12 +53,22 @@ const HeaderWrapper = styled.div`
     font-size: 25px;
     font-weight: bold;
   }
+
+  .navi-box > div {
+    cursor: pointer;
+  }
 `;
 
 const MobileNaviWrapper = styled.div`
   display: flex;
   min-height: 60px;
   align-items: center;
+  width: 100%;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
 
   .mobile-navi-box {
     display: flex;
@@ -68,6 +81,7 @@ const MobileNaviWrapper = styled.div`
     color: grey;
     letter-spacing: 5px;
     align-items: center;
+    cursor: pointer;
   }
 `;
 
@@ -78,10 +92,13 @@ const MobileNaviItemWrapper = styled.div`
   border-top: 1px solid grey;
   border-radius: 0 0 6px 6px;
   background-color: white;
-  position: absolute;
+  position: fixed;
+  top: 60px;
+  left: 0;
   overflow: hidden;
   transition: max-height 0.3s ease-in-out;
   max-height: 0;
+  z-index: 999;
 
   &.open {
     max-height: 200px;
