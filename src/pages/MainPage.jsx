@@ -1,8 +1,16 @@
-import { Welcome, AboutMe, Skill, Project, Career } from "../components";
+import {
+  ScrollButton,
+  Welcome,
+  AboutMe,
+  Skill,
+  Project,
+  Career,
+} from "../components";
 
 function MainPage() {
   return (
     <>
+      <ScrollButton />
       <Welcome />
       <AboutMe />
       <Skill />
