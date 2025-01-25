@@ -14,10 +14,7 @@ function Welcome() {
             <h1>DONGYEOP PORTFOLIO</h1>
           )}
           <div className="img-box">
-            <img
-              alt="이미지를 불러오지 못했습니다."
-              src="/images/selfie2.jpg"
-            />
+            <img alt="이미지를 불러오지 못했습니다." src="/images/selfie.jpg" />
           </div>
 
           <div className="ment-box">
@@ -40,7 +37,7 @@ const WelcomeWrapper = styled.div`
   width: auto;
   justify-content: center;
   align-items: center;
-  background-color: #00aff0;
+  background-color: #000080;
   color: white;
 
   & h1 {
