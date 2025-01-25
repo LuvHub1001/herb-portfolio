@@ -16,7 +16,7 @@ const sliderSettings = {
 
 const projectImages = [
   { id: "portfolio", images: ["/images/portfolio.png"] },
-  { id: "toy-js", images: ["/images/Nodejs.png"] },
+  { id: "toy-js", images: ["/images/ToyProject.webp"] },
   { id: "address", images: ["/images/address.png"] },
 ];
 

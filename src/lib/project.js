@@ -30,6 +30,7 @@ export const project_data = [
   {
     id: "toy-js",
     title: "토이 바닐라 프로젝트 + 자료구조 구현",
+    img: "/images/ToyProject.webp",
     during: "2025.01 ~ ",
     description:
       "JS만을 이용하여서, 간단한 모듈 및 자료구조를 직접 구현해보며 연습하였습니다",
