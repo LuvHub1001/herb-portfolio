@@ -47,6 +47,7 @@ const ItemWrapper = styled.div`
     border: 1px solid gray;
     border-radius: 8px;
     box-shadow: 8px 7px 1px 1px #efefef;
+    cursor: pointer;
   }
 `;
 
