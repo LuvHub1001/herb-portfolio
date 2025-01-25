@@ -16,8 +16,8 @@ export default Career;
 
 const CareerWrapper = styled.div`
   display: inline-block;
+  margin-top: 100px;
   width: 100%;
   height: 400px;
-  margin-top: 40px;
   text-align: center;
 `;

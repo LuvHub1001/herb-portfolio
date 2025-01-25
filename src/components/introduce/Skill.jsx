@@ -16,6 +16,7 @@ export default Skill;
 
 const SkillWrapper = styled.div`
   display: inline-block;
+  margin-top: 100px;
   width: 100%;
   min-height: 500px;
   text-align: center;

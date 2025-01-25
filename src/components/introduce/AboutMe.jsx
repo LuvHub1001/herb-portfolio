@@ -22,7 +22,7 @@ function AboutMe() {
 export default AboutMe;
 
 const AboutMeWrapper = styled.div`
-  margin-top: 40px;
+  margin-top: 100px;
   width: 100%;
   display: inline-block;
   min-height: 500px;

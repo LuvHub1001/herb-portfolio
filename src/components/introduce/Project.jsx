@@ -24,6 +24,7 @@ export default Project;
 
 const ProjectWrapper = styled.div`
   display: inline-block;
+  margin-top: 100px;
   width: 100%;
   min-height: 700px;
   text-align: center;
