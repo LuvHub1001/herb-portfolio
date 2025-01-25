@@ -12,7 +12,7 @@ export const project_data = [
       {
         impactTitle: "Styled-Component 등 CSS툴 활용 능력 향상",
         impactContent: [
-          "기존 이미 디자인이 되어있는 MUI의 컴포넌트들을 import 하며 사용해왔는데, styled-components로 직접 컴포넌트들을 구현하면서, css 속성에 대한 이해도가 향상하였습니다.",
+          "기존 이미 디자인이 되어있는 MUI의 컴포넌트들을 import 하며 사용해왔는데, styled-components로 직접 컴포넌트를 구현하면서, css 속성에 대한 이해도가 향상하였습니다.",
         ],
       },
 
@@ -50,23 +50,24 @@ export const project_data = [
         ],
       },
     ],
-    link: "",
+    link: "https://github.com/LuvHub1001/Data-Algo",
   },
 
   {
     id: "address",
     title: "인사시스템 리뉴얼",
+    img: "/images/address.png",
     during: "2023.01 ~ 2023.05",
     description: "사내 인사시스템을 리뉴얼하였습니다.",
     member:
       "프론트엔드 3명 / 관계사 관련 기능 담당, API설계 및 구축(기여도 40%)",
     projectKind: ["사내 프로젝트", "팀 프로젝트"],
     projectSkill: [
-      "TypeScript,",
-      "\tReact,",
-      "\tAxios,",
-      "\tRecoil,",
-      "\tMUI,",
+      "TypeScript",
+      "\tReact",
+      "\tAxios",
+      "\tRecoil",
+      "\tMUI",
       "\tNode JS",
     ],
     impact: [
