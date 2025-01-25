@@ -50,7 +50,8 @@ export const project_data = [
         ],
       },
     ],
-    link: "https://github.com/LuvHub1001/Data-Algo",
+    link: `https://github.com/LuvHub1001/Data-Algo`,
+    link2: `https://github.com/LuvHub1001/herb-toy-js`,
   },
 
   {

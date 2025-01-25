@@ -36,14 +36,31 @@ function ProjectItem({ items }) {
         <div>
           링크:{" "}
           {projectDetails.link ? (
-            <a
-              style={{ color: "inherit", textDecoration: "none" }}
-              href={projectDetails.link}
-              target="_blank"
-              rel="noreferrer"
-            >
-              {projectDetails.link}
-            </a>
+            <>
+              <a
+                style={{ color: "inherit", textDecoration: "none" }}
+                href={projectDetails.link}
+                target="_blank"
+                rel="noreferrer"
+              >
+                {projectDetails.link}
+              </a>
+              {projectDetails.link2 ? (
+                <div>
+                  링크2:{" "}
+                  <a
+                    style={{ color: "inherit", textDecoration: "none" }}
+                    href={projectDetails.link2}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    {projectDetails.link2}
+                  </a>
+                </div>
+              ) : (
+                <></>
+              )}
+            </>
           ) : (
             "링크 없음"
           )}
