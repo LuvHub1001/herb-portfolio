@@ -53,7 +53,7 @@ const WelcomeWrapper = styled.div`
 
   & img {
     margin: auto;
-    width: 250px;
+    width: 200px;
     height: 250px;
     border-radius: 100%;
   }
