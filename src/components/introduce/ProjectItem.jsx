@@ -16,6 +16,7 @@ const sliderSettings = {
 
 const projectImages = [
   { id: "portfolio", images: ["/images/portfolio.png"] },
+  { id: "herb-culture", images: ["/images/herb-culture.png"] },
   { id: "toy-js", images: ["/images/ToyProject.webp"] },
   { id: "address", images: ["/images/address.png"] },
 ];
@@ -34,7 +35,7 @@ function ProjectItem({ items }) {
         <div>사용 기술: {projectDetails.projectSkill.join(", ")}</div>
         <div>설명: {projectDetails.description}</div>
         <div>
-          링크:{" "}
+          링크: &nbsp;
           {projectDetails.link ? (
             <>
               <a
@@ -47,7 +48,7 @@ function ProjectItem({ items }) {
               </a>
               {projectDetails.link2 ? (
                 <div>
-                  링크2:{" "}
+                  링크2: &nbsp;
                   <a
                     style={{ color: "inherit", textDecoration: "none" }}
                     href={projectDetails.link2}
@@ -116,7 +117,6 @@ function ProjectItem({ items }) {
 
 export default ProjectItem;
 
-// Styled Components
 const ItemWrapper = styled.div`
   margin-top: 40px;
   display: flex;
@@ -147,6 +147,7 @@ const ItemWrapper = styled.div`
     align-items: flex-start;
     text-align: left;
     width: 50%;
+    height: 350px;
     border: 2px solid #efefef;
     border-radius: 8px;
   }
@@ -157,7 +158,7 @@ const MobileWrapper = styled.div`
   width: 90%;
 
   .project-item {
-    text-align: center;
+    text-align: left;
     padding: 10px;
   }
 
@@ -165,6 +166,7 @@ const MobileWrapper = styled.div`
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin-bottom: 20px;
   }
 
   .project-img-box {
@@ -173,7 +175,7 @@ const MobileWrapper = styled.div`
 
   & img {
     width: 350px;
-    height: 400px;
+    height: 350px;
   }
 
   .slick-dots li button:before {
